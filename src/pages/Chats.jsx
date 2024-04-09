@@ -89,10 +89,8 @@ const Chats = ({chatId,user}) => {
     setFileAnchore(e.currentTarget)
   }
 
-
   useEffect(()=>{
-    
-    socket.emit(CHAT_JOINED,{userId:user._id,members});
+    socket.emit(CHAT_JOINED,{userId:user._id, members});
     dispatch(removeMessagesAlert(chatId))
    
     return ()=>{
